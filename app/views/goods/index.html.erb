@@ -1,3 +1,9 @@
+<div class="contextual">
+  <% if User.current.allowed_to?(:add_goods, @project) %>
+    <%= link_to l(:label_good_new), {:controller => 'goods', :action => 'new', :project_id => @project}, :class => 'icon icon-add' %>
+  <% end %>
+</div>
+
 <h2><%=l(:label_goods)%></h2>
 
 <% @goods.each do |good| %>

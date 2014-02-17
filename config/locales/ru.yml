@@ -1,7 +1,13 @@
 "ru":
     label_goods: Товары
+    label_good_new: Новый товар
+
+    field_good_title: Наименование
+
     project_module_goods_module: Товары
     permission_view_goods: Просмотр товаров
     permission_add_goods: Добавление товаров
     permission_edit_goods: Редактирование товаров
     permission_delete_goods: Удаление товаров
+
+    message_goods_should_have_project: Товары создаются в проектах

@@ -1,1 +1,2 @@
-get 'goods', :to => 'goods#index'
+resources :goods do 
+end  
