@@ -1,0 +1,3 @@
+= RedmineCRM warehouse plugin
+
+This is a warehouse plugin for RedmineCRM

@@ -1,0 +1,1 @@
+get 'goods', :to => 'goods#index'
