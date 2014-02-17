@@ -1,3 +1,6 @@
 "ru":
-    label_goods: "Товары"
-
+    label_goods: Товары
+    project_module_goods_module: Товары
+    permission_view_goods: Просмотр товаров
+    permission_edit_goods: Редактирование товаров
+    permission_delete_goods: Удаление товаров

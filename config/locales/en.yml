@@ -1,3 +1,7 @@
 "en":
-    label_goods: "Goods"
+    label_goods: Goods
+    project_module_goods_module: Goods
+    permission_view_goods: View Goods
+    permission_edit_goods: Edit Goods
+    permission_delete_goods: Delete Goods
 
