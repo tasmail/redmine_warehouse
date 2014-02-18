@@ -6,6 +6,7 @@
 
 <h2><%=l(:label_goods)%></h2>
 
+<fieldset><legend><%= l(:label_filter_plural) %></legend>
 <%= form_tag({:controller => 'goods', :action => 'index', :project_id => @project}, :method => :get) do %>
 <label for='title'><%= l(:field_good_title) %>:</label>
 <%= text_field_tag 'title', params[:title], :size => 30 %>
