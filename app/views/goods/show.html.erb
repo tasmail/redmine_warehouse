@@ -15,7 +15,7 @@
 <p><label><%=l(:field_good_manufacture)%> :</label> <%= format_time(@good.manufacture)%></p>
 <% end %>
 <% if @good.issue_id %>
-<p><label><%=l(:field_good_issue_id)%> :</label> <%= @good.issue_id %></p>
+<p><label><%=l(:field_good_issue_id)%> :</label> <%= link_to @good.issue_id, {:controller => 'issues', :action => 'show', :id => @good.issue_id} %></p>
 <% end %>
 </fieldset>
 </div>
