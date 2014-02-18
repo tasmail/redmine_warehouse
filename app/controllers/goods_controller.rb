@@ -7,7 +7,7 @@ class GoodsController < ApplicationController
 
     def index
         sort_init 'created_on', 'desc'
-	sort_update %w(title price quantity created_on)
+	sort_update %w(title price quantity manufacture created_on)
 
 	scope = Good
 	scope = Good.where("title like ?", "%#{params[:title]}%") if params[:title].present?
