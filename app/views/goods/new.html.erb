@@ -1,0 +1,6 @@
+<%= title l(:label_good_new) %>
+<%= labelled_form_for @good, :url => {:action => 'create', :project_id => @project} do |f| %>
+<%= render :partial => 'form', :locals => { :f => f } %>
+<%= submit_tag l(:button_create) %>
+<%= submit_tag l(:button_create_and_continue), :name => 'continue' %>
+<% end %>

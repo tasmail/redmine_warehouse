@@ -1,0 +1,6 @@
+<% if User.current.allowed_to?(:view_goods, @project) %>
+    <% good = Good.find_by_issue_id(issue) %>
+    <% if good %>
+        <th><%=l(:field_good)%> :</th><td><%= link_to h(good.title), {:controller => 'goods', :action => 'show', :id => good, :project_id => @project} %></td>
+    <% end %>
+<% end %>
