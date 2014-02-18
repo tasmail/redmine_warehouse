@@ -3,6 +3,10 @@
     label_good_new: Новый товар
 
     field_good_title: Наименование
+    field_good_price: Цена
+    field_good_quantity: Количество
+    field_good_manufacture: Дата производства
+    field_good_issue_id: Номер задачи
 
     project_module_goods_module: Товары
     permission_view_goods: Просмотр товаров
@@ -11,3 +15,5 @@
     permission_delete_goods: Удаление товаров
 
     message_goods_should_have_project: Товары создаются в проектах
+
+    notice_successful_delete_good: Товар успешно удален

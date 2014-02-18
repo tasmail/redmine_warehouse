@@ -1,5 +1,6 @@
 class GoodsController < ApplicationController
     before_filter :find_project
+    before_filter :find_good, :only => [:show, :edit, :destroy]
 
     def index
 	@goods = Good.find(:all)
@@ -36,12 +37,22 @@ class GoodsController < ApplicationController
     end
 
     def destroy
+	if @good.destroy
+	    flash[:notice] = l(:notice_successful_delete_good)
+	end
+	redirect_to :action => 'index', :project_id => @project
     end
 
 private
   def find_project
     project_id = params[:project_id]
     @project = Project.find(project_id)
+  rescue ActiveRecord::RecordNotFound
+    render_404
+  end
+  def find_good
+    good_id = params[:id]
+    @good = Good.find(good_id)
   rescue ActiveRecord::RecordNotFound
     render_404
   end

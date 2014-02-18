@@ -3,11 +3,16 @@
     label_good_new: New good
 
     field_good_title: Title
+    field_good_price: Price
+    field_good_quantity: Quantity
+    field_good_manufacture: Date Manufacture
+    field_good_issue_id: Issue Id
 
     project_module_goods_module: Goods
     permission_view_goods: View Goods
-    project_module_goods_module: Add Goods
+    permission_add_goods: Add Goods
     permission_edit_goods: Edit Goods
     permission_delete_goods: Delete Goods
 
     message_goods_should_have_project: Goods should have project
+    notice_successful_delete_good: Good successfully deleted
