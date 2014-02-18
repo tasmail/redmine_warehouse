@@ -2,6 +2,7 @@
     label_goods: Товары
     label_good_new: Новый товар
 
+    field_good: Товар
     field_good_title: Наименование
     field_good_price: Цена
     field_good_quantity: Количество

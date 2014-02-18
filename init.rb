@@ -1,3 +1,5 @@
+require_dependency 'redmine_warehouse/view_issues_show_details_bottom_hook'
+
 Redmine::Plugin.register :warehouse do
   name 'RedmineCRM Warehouse plugin'
   author 'Andrey Tkachenko'
