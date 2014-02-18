@@ -1,9 +1,17 @@
 class GoodsController < ApplicationController
     before_filter :find_project
-    before_filter :find_good, :only => [:show, :edit, :destroy]
+    before_filter :find_good, :except => [:index, :new, :create]
+
+    helper :sort
+    include SortHelper
 
     def index
-	@goods = Good.find(:all)
+        sort_init 'created_on', 'desc'
+	sort_update %w(title price quantity created_on)
+
+	scope = Good
+	scope = Good.where("title like ?", "%#{params[:title]}%") if params[:title].present?
+	@goods = scope.order(sort_clause)
     end
 
     def new
@@ -34,6 +42,16 @@ class GoodsController < ApplicationController
     end
     
     def update
+        if @good.update_attributes(params[:good])
+	    flash[:notice] = l(:notice_successful_update)
+	    respond_to do |format|
+		format.html { redirect_to :action => "show", :project_id => @project, :id => @good }
+	    end
+	else
+	    respond_to do |format|
+		format.html { render "edit", :project_id => @project, :id => @good  }
+	    end
+	end
     end
 
     def destroy
