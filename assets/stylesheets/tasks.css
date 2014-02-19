@@ -6,7 +6,7 @@
 }
 
 #sidebar {
-    padding-left: 35px;
+    padding-left: 45px;
 }
 
 #sidebar .sidebar-task_demo{
@@ -29,9 +29,9 @@
 }
 
 #content {
-    border-right: 2px solid black;
+    border-right: 2px solid black;    
+    padding: 0px 15px 20px 20px;
 }
-
 
 table.task_demo {
     font-family: Arial;

@@ -5,4 +5,4 @@ match ':project_id/goods/:id'  => "goods#show"
 match ':project_id/goods/:id/edit'  => "goods#edit"
 
 resources :demo
-match ':id/demo'  => "goods#index"
+match ':id/demo'  => "demo#index"
