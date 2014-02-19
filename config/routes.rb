@@ -1,7 +1,8 @@
 resources :goods
-resources :demo
-
 match ':project_id/goods'  => "goods#index"
 match ':project_id/goods/new'  => "goods#new"
 match ':project_id/goods/:id'  => "goods#show"
 match ':project_id/goods/:id/edit'  => "goods#edit"
+
+resources :demo
+match ':id/demo'  => "goods#index"
