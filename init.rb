@@ -6,11 +6,12 @@ Redmine::Plugin.register :warehouse do
   description 'This is a warehouse plugin for RedmineCRM'
   version '0.0.1'
 
-  project_module :goods_module do
+  project_module :goods_module do	    
 	  permission :view_goods, :goods => [:index]
 	  permission :add_goods, :goods => [:new, :create]
 	  permission :edit_goods, :goods => [:edit, :update]
 	  permission :delete_goods, :goods => [:destroy]
+	  permission :view_demo, :demo => [:index]
   end
 
   menu(
@@ -20,5 +21,11 @@ Redmine::Plugin.register :warehouse do
     :caption => :label_goods,
     :after => :activity,
     :param => :project_id)
-
+ 
+  menu(
+    :project_menu,
+    :demo,
+    { :controller => 'demo', :action => 'index' },
+    :caption => :label_demo,
+    :after => :activity)
 end

@@ -1,8 +1,9 @@
 "en":
     label_goods: Goods
     label_good_new: New good
+    label_demo: HTML Design
 
-    field_goog: Good
+    field_good: Good
     field_good_title: Title
     field_good_price: Price
     field_good_quantity: Quantity
