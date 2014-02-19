@@ -1,0 +1,105 @@
+.task_demo_header{
+    color: black;
+    font-size:26px;
+    font-family: Arial;
+    font-weight: 500;
+}
+
+#sidebar {
+    padding-left: 35px;
+}
+
+#sidebar .sidebar-task_demo{
+    margin-left: 35px;
+}
+
+#sidebar h3 {
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#sidebar a {
+    display: block;
+    margin-bottom:7px;
+}
+
+#main{
+    background-color: white;    
+}
+
+#content {
+    border-right: 2px solid black;
+}
+
+
+table.task_demo {
+    font-family: Arial;
+    border: 1px solid gray;
+    border-top: none;
+    border-spacing: 0;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+table.task_demo .tag-label {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 1px 6px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+table.task_demo .tag-label a {
+        text-decoration:none;
+        color:black;
+    }
+
+table.task_demo .checkbox {
+        vertical-align:top;
+    }
+
+table.task_demo input[type=checkbox] {
+        border-radius: 3px;
+        width:20px;
+        height:20px;
+    }
+
+table.task_demo td {
+	padding: 10px;
+        border-top: 1px solid gray;
+    }
+
+table.task_demo .logo {
+        vertical-align:top;
+    }
+    
+table.task_demo .assignee_and_company {
+        vertical-align:top;
+    }
+
+table.task_demo td.subject_and_date, td.assignee_and_company {
+	color: black;
+        font-size: 20px;
+        margin-bottom:6px;
+    }
+
+.task_demo_date, .task_demo_company, .task_demo_type {
+	color: gray;
+        font-size: 12px;
+	font-weight: bold;
+        padding-top: 6px;
+    }
+
+.icon-task_demo {
+	font-size: 1.3em;
+        background-position: 0% 50%;
+        background-repeat: no-repeat;
+	padding-bottom: 6px;
+        padding-left: 26px;
+        padding-top: 2px;
+        padding-bottom: 3px;
+    }
+.icon-new-task_demo {
+        background-image:url("/plugin_assets/warehouse/images/task.png");
+    }

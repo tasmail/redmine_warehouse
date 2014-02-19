@@ -1,0 +1,114 @@
+.sidebar-tasks {
+    float:right;
+    margin-top:45px;
+    padding-left: 35px;
+}
+
+    .sidebar-tasks a {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .sidebar-tasks h3 {
+	color: black;
+        font-size: 22px;
+        margin-bottom:20px;
+    }
+
+.tasks_header h2{
+    margin-top:45px;
+    display: inline-block;
+}
+
+.content-tasks .contextual-tasks {
+    margin-top:55px;
+    float: right;
+}
+
+.contextual .icon-tasks {
+        background-position: 0% 50%;
+        background-repeat: no-repeat;
+        padding-left: 30px;
+        padding-top: 2px;
+        padding-bottom: 3px;
+    }
+.contextual .icon-new-task {
+	background-image:url("/plugin_assets/warehouse/images/task.png");    
+}
+
+.content-tasks .tasks_list {
+    padding-top:30px;
+}
+
+.content-tasks .tasks_header h2 {
+    font-size: 32px;
+}
+
+.content-tasks a {
+    color:#267EE4;
+}
+
+.content-tasks .tag-label {
+    padding-left:6px;
+    padding-right:6px;
+    padding-bottom:2px;
+    border:1px solid gray;
+    border-radius:7px;
+}
+
+.content-tasks .tag-label a {
+        font-size:0.8em;
+        text-decoration:none;
+        color:black;
+        font-weight: bold;
+    }
+
+.content-tasks table.tasks {
+    font-family: Arial;
+    border: 1px solid gray;
+    border-top: none;
+    border-spacing: 0;
+}
+
+.content-tasks table.tasks .checkbox {
+        vertical-align:top;
+    }
+
+.content-tasks table.tasks input[type=checkbox] {
+        border-radius: 3px;
+        width:20px;
+        height:20px;
+    }
+
+.content-tasks table.tasks td {
+        padding: 10px;
+        border-top: 1px solid gray;
+    }
+
+.content-tasks table.tasks .logo {
+        vertical-align:top;
+    }
+    
+.content-tasks table.tasks .assignee_and_company {
+        vertical-align:top;
+    }
+
+.content-tasks table.tasks h1 {
+        font-size: 20px;
+        margin-bottom:6px;
+    }
+
+.content-tasks table.tasks .task_date, .task_type, .task_company {
+        margin-bottom:8px;
+        font-size: 16px;
+        color: #5D5D5D;
+    }
+
+.content-tasks table.tasks tr.task {
+        border: 5px solid red;
+    }
+
+.content-tasks table.tasks img.logo {
+        height: 50px;
+        width: 50px;
+    }
