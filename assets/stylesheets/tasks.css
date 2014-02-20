@@ -104,5 +104,5 @@ table.task_demo td.subject_and_date, td.assignee_and_company {
         padding-bottom: 3px;
     }
 .icon-new-task_demo {
-        background-image:url("/plugin_assets/warehouse/images/task.png");
+        background-image:url("/plugin_assets/redmine_warehouse/images/task.png");
     }
