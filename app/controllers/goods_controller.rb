@@ -1,4 +1,5 @@
 class GoodsController < ApplicationController
+  before_filter :authorize
   before_filter :find_project
   before_filter :find_good, :except => [:index, :new, :create]
 
