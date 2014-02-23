@@ -1,40 +1,45 @@
 <div class="contextual">
-  <% if User.current.allowed_to?(:add_goods, @project) %>
-    <%= link_to l(:label_good_new), {:controller => 'goods', :action => 'new', :project_id => @project}, :class => 'icon icon-add' %>
-  <% end %>
+	<% if User.current.allowed_to?(:add_goods, @project) %>
+	<%= link_to l(:label_good_new), {:controller => 'goods', :action => 'new', :project_id => @project}, :class => 'icon icon-add' %>
+	<% end %>
 </div>
 
-<h2><%=l(:label_goods)%></h2>
+<h2><%= l(:label_goods)%></h2>
 
-<fieldset><legend><%= l(:label_filter_plural) %></legend>
-<%= form_tag({:controller => 'goods', :action => 'index', :project_id => @project}, :method => :get) do %>
-<label for='title'><%= l(:field_good_title) %>:</label>
-<%= text_field_tag 'title', params[:title], :size => 30 %>
-<%= submit_tag l(:button_apply), :class => "small", :name => nil %>
-<%= link_to l(:button_clear), {:controller => 'goods', :action => 'index', :project_id => @project}, :class => 'icon icon-reload' %>
+<fieldset>
+	<legend>
+		<%= l(:label_filter_plural) %>
+	</legend>
+	<%= form_tag({:controller => 'goods', :action => 'index', :project_id => @project}, :method => :get) do %>
+	<label for='title'><%= l(:field_good_title) %>:</label>
+	<%= text_field_tag 'title', params[:title], :size => 30 %>
+	<%= submit_tag l(:button_apply), :class => "small", :name => nil %>
+	<%= link_to l(:button_clear), {:controller => 'goods', :action => 'index', :project_id => @project}, :class => 'icon icon-reload' %>
 </fieldset>
 <% end %>
 &nbsp;
 
 <div class="autoscroll">
-<table class="list">
-  <thead><tr>
-  <%= sort_header_tag('title', :caption => l(:field_good_title)) %>
-  <%= sort_header_tag('price', :caption => l(:field_good_price)) %>
-  <%= sort_header_tag('quantity', :caption => l(:field_good_quantity)) %>
-  <%= sort_header_tag('manufacture', :caption => l(:field_good_manufacture)) %>
-  <%= sort_header_tag('created_on', :caption => l(:field_created_on), :default_order => 'desc') %>
-    <th></th>
-  </tr></thead>
-  <tbody>
-<% for good in @goods -%>
-  <td class="title"><%= link_to h(good.title), {:controller => 'goods', :action => 'show', :id => good, :project_id => @project} %></td>
-  <td class="price"><%= number_to_currency(good.price, :precision => 2) %></td>
-  <td class="quantity"><%= h(good.quantity) %></td>
-  <td class="manufacture"><%= format_time(good.manufacture) %></td>
-  <td class="created_on"><%= format_time(good.created_on) %></td>
-  </tr>
-<% end -%>
-  </tbody>
-</table>
+	<table class="list">
+		<thead>
+			<tr>
+				<%= sort_header_tag('title', :caption => l(:field_good_title)) %>
+				<%= sort_header_tag('price', :caption => l(:field_good_price)) %>
+				<%= sort_header_tag('quantity', :caption => l(:field_good_quantity)) %>
+				<%= sort_header_tag('manufacture', :caption => l(:field_good_manufacture)) %>
+				<%= sort_header_tag('created_on', :caption => l(:field_created_on), :default_order => 'desc') %>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for good in @goods -%>
+			<td class="title"><%= link_to h(good.title), {:controller => 'goods', :action => 'show', :id => good, :project_id => @project} %></td>
+			<td class="price"><%= number_to_currency(good.price, :precision => 2) %></td>
+			<td class="quantity"><%= h(good.quantity) %></td>
+			<td class="manufacture"><%= format_time(good.manufacture) %></td>
+			<td class="created_on"><%= format_time(good.created_on) %></td>
+			</tr>
+			<% end -%>
+		</tbody>
+	</table>
 </div>

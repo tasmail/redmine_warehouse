@@ -1,21 +1,29 @@
 <div class="contextual">
-<%= link_to l(:button_edit), {:controller => 'goods', :action => 'edit', :id => @good, :project_id => @project}, :class => 'icon icon-edit' if User.current.allowed_to?(:edit_goods, @project) %>
-<%= link_to l(:button_delete), good_path(@good, :project_id => @project), :method => :delete, :class => 'icon icon-del' if User.current.allowed_to?(:delete_goods, @project) %>
+	<%= link_to l(:button_edit), {:controller => 'goods', :action => 'edit', :id => @good, :project_id => @project}, :class => 'icon icon-edit' if User.current.allowed_to?(:edit_goods, @project) %>
+	<%= link_to l(:button_delete), good_path(@good, :project_id => @project), :method => :delete, :class => 'icon icon-del' if User.current.allowed_to?(:delete_goods, @project) %>
 </div>
 
-<h2><%=@good.title%></h2>
+<h2><%= @good.title%></h2>
 
 <div class="splitcontentleft">
-<fieldset class="box tabular">
-<% if @good.price %>
-<p><label><%=l(:field_good_price)%> :</label> <%= number_to_currency( @good.price, :precision => 2) %></p>
-<% end %>
-<p><label><%=l(:field_good_quantity)%> :</label> <%= @good.quantity %></p>
-<% if @good.manufacture %>
-<p><label><%=l(:field_good_manufacture)%> :</label> <%= format_time(@good.manufacture)%></p>
-<% end %>
-<% if @good.issue_id %>
-<p><label><%=l(:field_good_issue_id)%> :</label> <%= link_to @good.issue_id, {:controller => 'issues', :action => 'show', :id => @good.issue_id} %></p>
-<% end %>
-</fieldset>
+	<fieldset class="box tabular">
+		<% if @good.price %>
+		<p>
+			<label><%= l(:field_good_price)%> :</label> <%= number_to_currency( @good.price, :precision => 2) %>
+		</p>
+		<% end %>
+		<p>
+			<label><%= l(:field_good_quantity)%> :</label> <%= @good.quantity %>
+		</p>
+		<% if @good.manufacture %>
+		<p>
+			<label><%= l(:field_good_manufacture)%> :</label> <%= format_time(@good.manufacture)%>
+		</p>
+		<% end %>
+		<% if @good.issue_id %>
+		<p>
+			<label><%= l(:field_good_issue_id)%> :</label> <%= link_to @good.issue_id, {:controller => 'issues', :action => 'show', :id => @good.issue_id} %>
+		</p>
+		<% end %>
+	</fieldset>
 </div>

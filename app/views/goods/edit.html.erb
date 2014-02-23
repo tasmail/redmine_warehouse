@@ -1,4 +1,4 @@
-<h2><%=@good.title%></h2>
+<h2><%= @good.title%></h2>
 <%= labelled_form_for @good, :url => {:action => 'update', :id => @good, :project_id => @project} do |f| %>
 <%= render :partial => 'form', :locals => { :f => f } %>
 <%= submit_tag l(:button_submit) %>

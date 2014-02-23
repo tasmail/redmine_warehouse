@@ -1,10 +1,20 @@
 <%= error_messages_for 'good' %>
 
 <div class="box tabular">
-<!--[form:good]-->
-<p><%= f.text_field :title, :required => true, :size => 60, :label => :field_good_title %></p>
-<p><%= f.text_field :price, :required => false, :size => 10, :label => :field_good_price %></p>
-<p><%= f.text_field :quantity, :required => false, :size => 10, :label => :field_good_quantity %></p>
-<p><%= f.text_field :manufacture, :required => false, :size => 20, :label => :field_good_manufacture %><%= calendar_for('good_manufacture') %></p>
-<p><%= f.text_field :issue_id, :required => false, :size => 10, :label => :field_good_issue_id %></p>
+	<!--[form:good]-->
+	<p>
+		<%= f.text_field :title, :required => true, :size => 60, :label => :field_good_title %>
+	</p>
+	<p>
+		<%= f.text_field :price, :required => false, :size => 10, :label => :field_good_price %>
+	</p>
+	<p>
+		<%= f.text_field :quantity, :required => false, :size => 10, :label => :field_good_quantity %>
+	</p>
+	<p>
+		<%= f.text_field :manufacture, :required => false, :size => 20, :label => :field_good_manufacture %><%= calendar_for('good_manufacture') %>
+	</p>
+	<p>
+		<%= f.text_field :issue_id, :required => false, :size => 10, :label => :field_good_issue_id %>
+	</p>
 </div>
