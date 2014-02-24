@@ -1,5 +1,6 @@
 class Good < ActiveRecord::Base
-    belongs_to :project, :issue
+    belongs_to :project
+    belongs_to :issue
 
     validates_presence_of :title
     validates_uniqueness_of :title
